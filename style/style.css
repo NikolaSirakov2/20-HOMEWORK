@@ -15,11 +15,18 @@ header a {
 
 main {
     height: 80vh;
+    
+    
 }
 
 #login {
     height: 80vh;
     background-color: aquamarine;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 #register {
@@ -39,4 +46,10 @@ footer {
     color: aliceblue;
     align-items: center;
     justify-content: center;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
 }
