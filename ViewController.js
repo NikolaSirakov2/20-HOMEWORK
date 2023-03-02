@@ -2,7 +2,7 @@ class ViewController {
   constructor() {
     window.addEventListener("hashchange", this.handleHashChange);
     window.addEventListener("load", this.handleHashChange);
-    this.userManager = new UserManager();
+    
   }
 
   handleHashChange = () => {
@@ -19,12 +19,23 @@ class ViewController {
       }
     });
 
-    switch (hash) {
+    switch(hash) {
       case "login":
         this.renderLoginPage();
-        break;
+        
     }
   };
+
+  renderLoginPage = () => {
+
+    let form = document.getElementById("loginForm");
+
+    form.onsubmit = (e) => {
+        e.preventDefault();
+
+        console.log(e.target)
+    }
+  }
 }
 
 let viewController = new ViewController();

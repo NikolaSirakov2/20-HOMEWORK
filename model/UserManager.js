@@ -7,24 +7,30 @@ class User {
 
 class UserManager {
 
-    logedUser = null;
-    allUsers = [{name: 'Nik', password: 'test'}, {name: 'Clara', password: 'kod'}];
+    loggedUser = null;
+    allUsers = [new User ('Nik', 'test'), new User ('Clara', 'kod')];
 
     showAlert = () => {
         alert("Wrong username ot password!")
     };
 
-    createUser = () =>{
+    createUser = ({name, password}) =>{
+        let newUser = this.allUsers.find(user => user.name === name);
 
+        if(!newUser){
+            this.allUsers.push(newUser);
+        }
     }
 
-    logInUser = (name, password) => {
-        let existingUser = this.allUsers.filter(user => user.name === name && user.password === password);
+    logInUser = ({name, password}) => {
+        let existingUser = this.allUsers.find(user => user.name === name && user.password === password);
 
         if (existingUser){
-            this.logedUser = {name: name, password: password};
+            this.loggedUser = existingUser;
+            return true;
         } else {
             this.showAlert();
+            return false;
         }
     }
 }
