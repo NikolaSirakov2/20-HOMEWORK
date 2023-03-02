@@ -7,6 +7,7 @@
     <title>Login Form</title>
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/style.css">
+    <script src="./model/UserManager.js"></script>
 </head>
 <body>
     <header>
@@ -23,7 +24,14 @@
                 <input type="button" value="Login">
             </form>
         </div>
-        <div id="register"></div>
+        <div id="register">
+            <form>
+                <input type="text" placeholder="username">
+                <input type="text" placeholder="password">
+                <input type="text" placeholder="confirm password">
+                <input type="button" value="Login">
+            </form>
+        </div>
         <div id="home"></div>
     </main>
 
@@ -31,7 +39,7 @@
         <p>&copy; Copyright Nikola Sirakov 2023</p>
     </footer>
 
-    <script src="./model/UserManager.js"></script>
+    
     <script src="./ViewController.js"></script>
 </body>
 </html>

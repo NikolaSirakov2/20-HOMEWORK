@@ -10,6 +10,10 @@ class UserManager {
     logedUser = null;
     allUsers = [{name: 'Nik', password: 'test'}, {name: 'Clara', password: 'kod'}];
 
+    showAlert = () => {
+        alert("Wrong username ot password!")
+    };
+
     createUser = () =>{
 
     }
@@ -18,7 +22,9 @@ class UserManager {
         let existingUser = this.allUsers.filter(user => user.name === name && user.password === password);
 
         if (existingUser){
-            
+            this.logedUser = {name: name, password: password};
+        } else {
+            this.showAlert();
         }
     }
 }

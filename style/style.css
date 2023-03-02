@@ -32,6 +32,9 @@ main {
 #register {
     height: 80vh;
     background-color: rgb(129, 173, 206);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #home {
