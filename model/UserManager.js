@@ -14,7 +14,7 @@ class UserManager {
         alert("Wrong username ot password!")
     };
 
-    createUser = ({name, password}) =>{
+    createUser = (name) =>{
         let newUser = this.allUsers.find(user => user.name === name);
 
         if(!newUser){
@@ -35,4 +35,3 @@ class UserManager {
     }
 }
 
-let userManager = new UserManager();
