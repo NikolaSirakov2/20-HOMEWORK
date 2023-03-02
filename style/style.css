@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    background-color: tomato;
+    height: 15vh;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+header a {
+    text-decoration: none;
+    color: aqua;
+    font-size: 30px;
+}
+
+main {
+    height: 80vh;
+}
+
+#login {
+    height: 80vh;
+    background-color: aquamarine;
+}
+
+#register {
+    height: 80vh;
+    background-color: rgb(129, 173, 206);
+}
+
+#home {
+    height: 80vh;
+    background-color: blanchedalmond;
+}
+
+footer {
+    display: flex;
+    height: 5vh;
+    background-color: gray;
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+}
