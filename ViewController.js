@@ -32,7 +32,8 @@ class ViewController {
 
             case 'login':
                 this.renderLogin();
-
+            case 'home':
+                this.renderHomePage();
         }
 
     }
@@ -47,9 +48,24 @@ class ViewController {
             let username = e.target.elements.username.value;
             let pass = e.target.elements.pass.value;
 
-            let successfulLogin = userManager.login({username, pass});
+            let successfullLogin = userManager.login({username, pass});
 
         }
+
+        let register = document.getElementById('registerForm');
+
+        register.onsubmit = (e) => {
+            e.preventDefault();
+            let username = e.target.elements.username.value;
+            let pass = e.target.elements.pass.value;
+            let confirm = e.target.elements.confirm.value;
+
+            let successfullRegistration = userManager.createUser({username, pass, confirm});
+        }
+    }
+
+    renderHomePage = () => {
+        console.log("hello");
     }
     
 }

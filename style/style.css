@@ -63,3 +63,23 @@ form {
     gap: 10px;
     flex-direction: column;
 }
+
+.popUp {
+    background-color: aliceblue;
+    position: absolute;
+    height: 80px;
+    /* display: none; */
+    border-radius: 6px;
+    text-align: center;
+    padding: 20px;
+    display: none;
+}
+
+.popUp button {
+   margin: 20px;
+   height: 30px;
+   width: 100px;
+   background-color: tomato;
+   color: antiquewhite;
+   cursor: pointer;
+}
