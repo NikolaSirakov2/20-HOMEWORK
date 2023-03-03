@@ -22,16 +22,15 @@ class UserManager {
         }
     }
 
-    logInUser = ({name, password}) => {
-        let existingUser = this.allUsers.find(user => user.name === name && user.password === password);
+    login = ({username, pass}) => {
+        let foundUser = this.allUsers.find(user => user.username === username && user.pass === pass);
 
-        if (existingUser){
-            this.loggedUser = existingUser;
+        if (foundUser){
+            this.loggedUser = foundUser;
             return true;
-        } else {
-            this.showAlert();
-            return false;
-        }
+        } 
+
+        return false;
     }
 }
 

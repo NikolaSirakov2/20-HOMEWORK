@@ -10,6 +10,12 @@ class ViewController {
 
     let hash = window.location.hash.slice(1) || pageIds[0];
 
+    if(hash === "home"){
+        if(!this.userManager.loggedUser){
+            hash = 'login';
+        }
+    }
+
     pageIds.forEach((page) => {
       let element = document.getElementById(page);
       if (page === hash) {
@@ -21,19 +27,22 @@ class ViewController {
 
     switch (hash) {
       case "login":
-        this.renderLoginPage();
+        this.renderLogin();
         break;
     }
   };
 
-  renderLoginPage = () => {
+  renderLogin = () => {
 
     let form = document.getElementById("loginForm");
 
     form.onsubmit = (e) => {
         e.preventDefault();
+        console.log(e.target);
+        let name = e.target.elements.username.value;
+        let password = e.target.elements.pass.value;
 
-        console.log(e.target)
+        let successfullLogin = this.userManager.login({name, password});
     }
   }
 }
