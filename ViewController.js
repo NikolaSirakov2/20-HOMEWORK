@@ -65,7 +65,7 @@ class ViewController {
     }
 
     renderHomePage = () => {
-        console.log("hello");
+        
     }
     
 }
